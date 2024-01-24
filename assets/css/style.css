@@ -140,7 +140,7 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  height: 90px;
+  height: auto;
   position: fixed;
   left: 0;
   top: 0;
@@ -152,7 +152,7 @@ h6 {
 #header.header-scrolled,
 #header.header-inner {
   background: rgba(6, 12, 34, 0.98);
-  height: 70px;
+  height: auto;
 }
 
 #header #logo h1 {
@@ -223,6 +223,34 @@ h6 {
 /**
 * Desktop Navigation 
 */
+.marquee {
+  width: 100%;
+  color: #fff;
+  background: #f82249;
+  padding: 7px 22px;
+  margin: 15px 15px 15px 15px;
+  font-weight: 500;
+  line-height: 1;
+  font-size: 17px;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee span {
+  display: inline-block;
+  animation: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 .navbar {
   padding: 0;
 }
@@ -475,6 +503,7 @@ h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+
 #hero {
   width: 100%;
   height: 100vh;
